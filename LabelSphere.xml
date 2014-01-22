@@ -44,7 +44,7 @@
     -->
     <Content type="html">
         <![CDATA[
-            <script src="http://www.google.com/jsapi"></script>
+            <script src="//www.google.com/jsapi"></script>
             <script type="text/javascript">
 ikaika=function(F){function G(){$(this)[A]({opacity:"1",fontSize:"100%"},"fast")}function H(){$(this)[A]({opacity:".5",fontSize:"70%"},"fast")}function I(a){if(a.text=="User does not have permission to read this blog.")t("This gadget only works on public blogs");else{var c;a:{c=a.data.feed.link;for(var f in c)if(c[f].rel=="alternate"){c=c[f].href;break a}c=void 0}if(typeof c=="undefined")t("Error getting Website URL");else{J(a,c);if(q){K();n.dismissMessage(B);L();M()}else t("No Labels")}}}function t(a){n.dismissMessage(B);
 n.createStaticMessage(a)}function J(a,c){var f=a.data.feed.entry;for(var e in f){var d=f[e].category;for(var i in d){if(q>=u)break;var h=d[i].term;if(b.hasOwnProperty(h))b[h].c++;else{$(j).append('<div id="'+h+'" class="ikaikaLabel" style="position:absolute;border-width:1"><a href="'+c+"search/label/"+h+'" target="_parent">'+h+"</a></div>");b[h]={};b[h].c=1;q++}}}$("a")[l]({color:o("CONTENT_LINK_COLOR"),textDecoration:"none"});$(".ikaikaLabel")[v](function(){$(this)[l]({borderStyle:"solid"})},function(){$(this)[l]({borderStyle:"none"})})}
