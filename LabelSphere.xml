@@ -52,8 +52,6 @@ function K(){k=$(j)[w]>$(j)[x]?$(j)[x]():$(j)[w]();p=k*3/11;k=k/2-1;var a=Math.P
 $(j).offset(),f=a.pageX-c.left-k;a=k-(a.pageY-c.top);c=y(f*f+a*a);m=Math.atan2(c,p)/15;g.x=0;g.y=a/c;g.a=f/c})}function M(){$(j)[v](function(){r=0;s=setTimeout(z,33)},function(){r=1})}function z(){var a=C(m),c=1-a,f=D(m);for(var e in b){var d={},i={};i.x=g.y*b[e].a-g.a*b[e].y;i.y=g.a*b[e].x-g.x*b[e].a;i.a=g.x*b[e].y-g.y*b[e].x;var h=g.x*b[e].x+g.y*b[e].y+g.a*b[e].a;d.x=b[e].x*a;d.x+=i.x*f;d.x+=g.x*h*c;d.y=b[e].y*a;d.y+=i.y*f;d.y+=g.y*h*c;d.a=b[e].a*a;d.a+=i.a*f;d.a+=g.a*h*c;b[e].x=d.x;b[e].y=d.y;
 b[e].a=d.a;E(b[e])}if(r){m-=m/20;if(m<0.01){r=0;clearTimeout(s)}else s=setTimeout(z,33)}else s=setTimeout(z,33)}var y=Math.sqrt,D=Math.sin,C=Math.cos,O=new gadgets.Prefs,l="css",v="hover",A="animate",w="width",x="height",N="attr",j,k,q=0,b={},p,s,r=0,m,g={},o=gadgets.skins.getProperty,P=o("FONT_FACE"),n=new gadgets.MiniMessage(F);if(google.hasOwnProperty("Blog")){var B=n.createStaticMessage("Loading..."),u=parseInt(O.getString("maxLabels"),10);if(isNaN(u))u=20;google.load("jquery","1");google.setOnLoadCallback(function(){j=
 $("#ikaika-container");$("*")[l]({backgroundColor:o("CONTENT_BG_COLOR"),color:o("CONTENT_LINK_COLOR"),fontFamily:P});$(j)[l]({borderColor:o("BORDER_COLOR")});$("#ikaika")[v](G,H);var a=new google.Blog(function(){a.getPostsJson(I)},window.name)})}else n.createStaticMessage("Label Sphere only works in Blogger")};
-            </script>
-            <script type="text/javascript">
                 gadgets.util.registerOnLoadHandler(function(){
                     ikaika(__MODULE_ID__)
                 });
